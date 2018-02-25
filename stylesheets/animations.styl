@@ -1,0 +1,57 @@
+fadeUp() 
+	opacity 1
+	animation fadeUp
+	animation-duration 1s
+	will-change transform
+
+@keyframes fadeUp
+	from
+		opacity 0
+		transform translateY(100px)
+	to
+		opacity 1
+		transform translateY(0px)
+
+
+fadeDown() 
+	opacity 1
+	animation fadeDown
+	animation-duration 1s
+	will-change transform
+
+@keyframes fadeDown
+	from
+		opacity 0
+		transform translateY(-100px)
+	to
+		opacity 1
+		transform translateY(0px)
+
+
+fadeIn() 
+	opacity 1
+	animation fadeIn
+	animation-duration 3s
+	will-change opacity 
+
+@keyframes fadeIn
+	from
+		opacity 0
+	to
+		opacity 1
+
+blockFadeIn() 
+	opacity 1
+	animation blockFadeIn
+	animation-duration .5s
+	will-change opacity 
+	display block
+	
+@keyframes blockFadeIn
+	0%
+		opacity 0
+		display none
+	50%
+		display block
+	100%
+		opacity 1

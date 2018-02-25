@@ -1,13 +1,18 @@
 // Header 
-.header
+header.header
 	width 100%
-	height 170px
+	height 120px
 	max-width $screen-device-large
 	margin-left auto
 	margin-right auto
 	display flex
-	justify-content space-between
 	align-items center
+	justify-content space-between
+	padding-left 20px
+	padding-right 20px
+
+	@media (min-width: $screen-device-large)
+		height 170px
 
 	> .brand
 		height 62px
@@ -16,7 +21,7 @@
 		> img 
 			height 100%
 
-	> .navigation
+	> nav.navigation
 		display inline-block
 
 		> .link
@@ -26,6 +31,10 @@
 			font-size .9em
 			font-weight 600
 			user-select none
+			display none
+
+			@media (min-width: $screen-device-medium)
+				display inline-block
 
 			& + .link 
 				margin-left 15px
@@ -35,56 +44,124 @@
 				font-style italic
 				cursor not-allowed
 
-// Main
-.main
-	width 100%
-	max-width $screen-device-large
-	margin-left auto
-	margin-right auto
+		.select
+			display inline-block
+			vertical-align middle
+			height 40px
+			width 53.3333px
+			margin-left 15px
+			cursor pointer
+			position relative
+			padding-top 5px
+			padding-bottom 5px
 
+			@media (min-width: $screen-device-medium)
+				height 30px
+				width 40px
+		
+
+			> img
+				width 100%
+				height 100%
+
+			> .dropdown
+				display none
+				position absolute
+				top 45px
+
+				@media (min-width: $screen-device-medium)
+					top 35px
+
+				> .item 
+					height 40px
+					width 53.3333px
+					padding-top 5px
+					padding-bottom 5px
+
+					@media (min-width: $screen-device-medium)
+						height 30px
+						width 40px
+					
+					> img 
+						width 100%
+						height 100%
+
+			&.-show
+				> .dropdown
+					blockFadeIn()
+// Main
+main.main
+	> section
+		width 100%
+		max-width $screen-device-large
+		margin-left auto
+		margin-right auto
+		padding-left 20px
+		padding-right 20px
+
+	
 	//Apresentation
-	> .apresentation
-		height calc(100vh - 170px)
+	> section.apresentation
+		min-height calc(100vh - 170px)
 		display flex
 		flex-direction column
 		justify-content center
+
+			
 		> .title
-			font-size 3.25em
+			font-size 2.25em
 			font-weight 300
 			line-height 1.2em
+			fadeDown()
+
+			@media (min-width: $screen-device-large)
+				font-size 3.25em
 
 			> strong 
 				font-weight 600
 		
 		> .description
 			max-width 680px
-			font-size 1.5em
+			font-size 1.2em
 			font-weight 300
 			line-height 1.4em
-			margin-top 50px
-			margin-bottom 50px
+			margin-top 30px
+			margin-bottom 30px
+			fadeIn()			
+
+			@media (min-width: $screen-device-large)
+				margin-top 50px
+				margin-bottom 50px
+				font-size 1.5em
 
 		> .more
 			background linear-gradient(to right, $blue , $purple);
-			height 55px
-			width 180px
+			width 100px
+			height 45px
 			color white
-			font-size 1.5em
+			font-size 1.2em
 			font-weight 400
 			cursor pointer
+			fadeIn()
+
+			@media (min-width: $screen-device-large)
+				width 160px
+				height 50px
 
 			&:hover
 				background linear-gradient(to right, $blue-hover , $purple-hover);
 
 
 	//About
-	.about
+	section.about
+		padding-top 70px 
+
 		> .title
 			width 100%
 			font-size 1.8em
 			font-weight 600
 			text-align center
-			margin-bottom 50px
+			margin-bottom 80px
 
 			> img 
 				vertical-align middle
@@ -102,24 +179,107 @@
 				margin-top 40px
 
 	// Co-workers
-	.co-workers
-		margin-top 200px
-		> .title
+	section.co-workers
+		padding-top 150px
+
+		> h2.title
 			width 100%
 			font-size 1.8em
 			font-weight 600
 			text-align center
-			margin-bottom 50px
+			margin-bottom 80px
 
 			> img 
 				vertical-align middle
 				height 36px
 				margin-right 10px
 
+		> ul.list
+			overflow-x auto
+			overflow-y hidden
+			text-align center
+			white-space nowrap
+
+			> li.item 
+				display inline-block
+				& + li.item 
+					margin-left 100px
+					
+				> a > img 
+					height 80px
+
+	// Contact
+	section.contact
+		width 100%
+		background linear-gradient(to right, $blue , $purple);		
+		max-width none
+		padding-top 100px
+		padding-bottom 100px
+		margin-top 150px
+		text-align center
+
+		> h3.description
+			width 100%
+			color white
+			font-size 1em
+			font-weight 400
+			display inline-block
+			line-height 1.4em
+			margin-bottom 100px
+			padding-left 20px
+			padding-right 20px
+
+			@media (min-width: $screen-device-large)
+				max-width 480px
+				padding-left 0px
+				padding-right 0px
+	
 			
+		> ul.list
+			width 100%
+			max-width $screen-device-xlarge
+			margin-left auto			
+			margin-right auto
+			display flex
+			justify-content space-between
+			flex-wrap wrap
 
+			> li.item
+				width 100%
+				text-align center
 
-		
-
+				& + li.item
+					margin-top 80px
 				
-		
+				@media (min-width: $screen-device-large)
+					width 33.333333%
+
+					& + li.item
+						margin-top 0px
+
+				> h4 
+					color white
+					font-weight 600
+					margin-bottom 30px
+
+				> a
+					color white
+					text-decoration underline
+					font-size .8em
+				
+				> ul.social-list
+					> li.social
+						display inline-block
+						& + li.social
+							margin-left 10px
+
+						> a > img
+							height 25px 
+//Footer
+footer.footer
+	padding 30px
+	background linear-gradient(to right, $blue , $purple);				
+	text-align center
+
+	> img 
+		height 50px

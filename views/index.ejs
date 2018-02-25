@@ -3,61 +3,125 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Thevelops</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title><%= seo.title %></title>
+
+	<meta name="description" content="<%- seo.description %>" >
+	<meta name="author" content="TheVelops Community">
+	<link rel="icon" href="/assets/images/favicon.png" type="image/png" />
+
+	<!-- facebook -->
+	<meta property="og:locale" content="en_US">
+	<meta property="og:url" content="http://www.thevelops.com">
+	<meta property="og:title" content="<%- seo.title %>">
+	<meta property="og:site_name" content="theVelops">
+	<meta property="og:description" content="<%- seo.description %>">
+	<meta property="og:image" content="http://www.thevelops.com/assets/images/facebook-share.png">
+	<meta property="og:image:type" content="image/png">
+	<meta property="og:image:width" content="800">
+	<meta property="og:image:height" content="500">
+
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700,700i" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" media="screen" href="/build/bundle.min.css" />
 </head>
 <body>
 	<header class="header">
 		<figure class="brand">
-			<img src="/assets/icons/brand.svg" />
+			<img src="/assets/icons/brand.svg" alt="<%= seo.brand %>" />
 		</figure>
-		<nav class="navigation">
-			<a class="link -coming-soon" href="#">blog (coming soon)</a>
-			<a class="link" href="#">about</a>
-			<a class="link" href="#">co-workers</a>
-			<a class="link" href="#">contact</a>
+		<nav class="navigation" navigation>
+			<a class="link -coming-soon" href="#"><%= navigation.blog %></a>
+			<a class="link" href="#about"><%= navigation.about %></a>
+			<a class="link" href="#co-workers"><%= navigation.coWorkers %></a>
+			<a class="link" href="#contact"><%= navigation.contact %></a>
+			<div class="select" lg-select>
+				<img src="/assets/images/<%= language %>.png" />
+				<ul class="dropdown">
+					<li class="item" id="en-us"><img src="/assets/images/en-us.png"/></li>
+					<li class="item" id="pt-br"><img src="/assets/images/pt-br.png"/></li>
+				</ul>	
+			</div>
 		</nav>
 	</header>
 	<main class="main">
 		<section id="apresentation" class="apresentation">
 			<h1 class="title">
-				<p>Hello,</p>
-				we are us <strong>theVelops</strong>
+				<%- apresentation.title %>
 			</h1>
 			<p class="description">
-				 We invest technology in projects, developing software in cost price in exchange of equity.
+				<%= apresentation.description %>
 			</p>
-			<button type="button" class="more">More</button>
+			<button more-action class="more"><%= apresentation.more %></button>
 		</section>
 		<section id="about" class="about">
 			<h2 class="title">
 				<img src="/assets/icons/about.svg" />
-				About us
+				<%= about.title %>				
 			</h2>
 			<div class="text">
-				<p>Mussum Ipsum, cacilds vidis litro abertis. Quem num gosta di mim que vai caçá sua turmis! Leite de capivaris, leite de mula
-				manquis sem cabeça. Per aumento de cachacis, eu reclamis. In elementis mé pra quem é amistosis quis leo.</p>
-				<p>Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Mauris nec dolor in eros commodo tempor. Aenean aliquam
-				molestie leo, vitae iaculis nisl. Si num tem leite então bota uma pinga aí cumpadi! Praesent vel viverra nisi. Mauris aliquet
-				nunc non turpis scelerisque, eget.</p>
+				<%- about.text %>
 			</div>
 		</section>
 		<section id="co-workers" class="co-workers">
 			<h2 class="title">
 				<img src="/assets/icons/co-workers.svg" />
-				Co-workers
+				<%= coWorkers.title %>				
 			</h2>
-			<div class="list">
-				<div class="item"></div>
-				<div class="item"></div>
-				<div class="item"></div>
-			</div>
+			<ul class="list">
+				<li class="item">
+					<a href="#">
+						<img src="/assets/icons/amazon.svg" alt="<%= coWorkers.alts.amazon %>" />
+					</a>
+				</li>
+				<li class="item">	
+					<a href="#">
+						<img src="/assets/icons/permuta.svg" alt="<%= coWorkers.alts.permuta %>" />
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<img src="/assets/icons/agro.svg" alt="<%= coWorkers.alts.agro %>" />
+					</a>
+				</li>
+			</ul>
+		</section>
+		<section class="contact" id="contact">
+			<h3 class="description"><%= apresentation.description %></h3>
+			<ul class="list">
+				<li class="item">
+					<h4><%= contact.visit %></h4>
+					<a href="#">Av. Queiroz Filho, 1700 | Torre C, Conjunto 103</a>
+				</li>
+				<li class="item">
+					<h4><%= contact.write %></h4>
+					<a href="#">contato@thevelops.com</a>
+				</li>
+				<li class="item">
+					<h4><%= contact.follow %></h4>
+					<ul class="social-list">
+						<li class="social">
+							<a href="#" target="_blank">
+								<img src="/assets/icons/facebook.svg" alt="facebook" />
+							</a>
+						</li>
+						<li class="social">
+							<a href="#" target="_blank">
+								<img src="/assets/icons/github.svg" alt="github" />
+							</a>
+						</li>
+						<li class="social">
+							<a href="#" target="_blank">
+								<img src="/assets/icons/youtube.svg" alt="youtube"/>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
 		</section>
 	</main>
 	<footer class="footer">
-		
+		<img src="/assets/icons/white-brand.svg" alt="<%= seo.brand %>" />
 	</footer>
+	<script type='text/javascript' src='/build/bundle.min.js'></script>
 </body>
 </html>
