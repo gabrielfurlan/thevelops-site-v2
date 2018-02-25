@@ -1,0 +1,43 @@
+{
+  "name": "thevelops",
+  "version": "2.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack && gulp style && gulp sprite && babel-node server",
+    "dev": "nodemon server --exec \"eslint src/ && eslint server/ && babel-node \"",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "author": "Coletivo theVelops",
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "^8.0.0",
+    "babel-cli": "^6.24.0",
+    "babel-core": "^6.24.0",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-css-modules-transform": "^1.3.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "ejs": "^2.5.7",
+    "eslint": "^3.18.0",
+    "eslint-plugin-babel": "^4.1.1",
+    "express": "^4.15.2",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.0.4",
+    "gulp-merge-media-queries": "^0.2.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-remote-src": "^0.4.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-stylus": "^2.6.0",
+    "gulp-svg-sprite": "^1.3.7",
+    "smoothscroll": "^0.4.0",
+    "uglifyjs-webpack-plugin": "^0.3.0",
+    "webpack": "^2.2.1"
+  },
+  "devDependencies": {}
+}
