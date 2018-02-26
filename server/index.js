@@ -4,7 +4,7 @@ import path from "path";
 import languages from "../languages";
 
 const app = express();
-const port = process.env.PORT || 8888;
+const port = process.env.PORT || 8080;
 
 app.use("/", express.static("public"));
 app.set("views", path.join(__dirname, "../views"));
