@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack && gulp style && gulp sprite && babel-node server",
+    "start": "webpack && gulp style && babel-node server",
     "dev": "nodemon server --exec \"eslint src/ && eslint server/ && babel-node \"",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"

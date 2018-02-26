@@ -4,13 +4,13 @@ export default {
 		brand: "Thevelops brand."
 	},
 	apresentation: {
-		title: "<p>Hello,</p> we are us <strong>theVelops</strong>",
+		title: "<p>Hello,</p> we are <strong>theVelops</strong>",
 		description: "We invest technology in projects, developing software in cost price in exchange of equity.",
 		more: "More"
 	},
 	about: {
 		title: "About us",
-		text: "<p>Mussum Ipsum, cacilds vidis litro abertis. Quem num gosta di mim que vai caçá sua turmis! Leite de capivaris, leite de mula manquis sem cabeça. Per aumento de cachacis, eu reclamis. In elementis mé pra quem é amistosis quis leo.</p> <p>Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl. Si num tem leite então bota uma pinga aí cumpadi! Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget.</p>",
+		text: "<p>We theVelop websites, apps and applications in a new and revolucionary way. You are not our customer, we are partners, and that's our biggest difference. We depend on your success.  </p>",
 	},
 	coWorkers: {
 		title: "Co-workers",
