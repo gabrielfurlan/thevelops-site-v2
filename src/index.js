@@ -11,7 +11,6 @@ const languageSelectItems = document.querySelectorAll("[lg-select] > .dropdown >
 languageSelectItems.forEach(item => {
 	item.addEventListener("click", e => {
 		e.stopPropagation();
-		console.log("LOCATION", location);
 		location.href = `/?lang=${e.currentTarget.id}`;
 	});
 });
@@ -26,8 +25,8 @@ moreButton.addEventListener("click", e => {
 // Controlling navigation
 const navigationItems = document.querySelectorAll("[navigation] > .link");
 navigationItems.forEach(item => {
+	if (!item || !item.currentTarget) return;
 	const { href } = item.currentTarget;
-	console.log("item.currentTarget", item.currentTarget);
 	const section = document.querySelector(href);
 	smoothscroll(section);
 });
