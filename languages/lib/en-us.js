@@ -1,6 +1,6 @@
 export default {
 	seo: {
-		title: "Hello, we are us theVelops.",
+		title: "Hello, we are theVelops.",
 		brand: "Thevelops brand."
 	},
 	apresentation: {
