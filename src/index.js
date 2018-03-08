@@ -1,6 +1,5 @@
 import smoothscroll from "smoothscroll";
 
-
 // Controlling language select
 const languageSelect = document.querySelector("[lg-select]");
 languageSelect.addEventListener("click", e => {
